@@ -1,0 +1,8 @@
+streamlit
+os
+requests
+replicate
+Pillow
+langchain
+langchain-community
+langchain-core

@@ -17,7 +17,7 @@ api_token = st.text_input("Enter your Replicate API Token", type="password")
 if api_token:
     # Set the Replicate API token
     os.environ["REPLICATE_API_TOKEN"] = api_token
-
+    api = replicate.Client(api_token=os.environ["REPLICATE_API_TOKEN"])
     # Input fields for the parameters
     cfg = st.number_input("CFG (Classifier-Free Guidance)", value=4)
     image_url = st.text_input("Image URL", value="https://replicate.delivery/pbxt/LI5VAhU2v3jNTjuE76GMTzikT1XMiUoRSznZdXR0cAnK1XJS/ComfyUI_00362_.png")
